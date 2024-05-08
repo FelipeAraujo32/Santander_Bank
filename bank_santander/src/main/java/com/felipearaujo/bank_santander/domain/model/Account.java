@@ -47,13 +47,13 @@ public class Account {
     public void setAgency(String agency) {
         this.agency = agency;
     }
-    public Number getBalance() {
+    public BigDecimal getBalance() {
         return balance;
     }
     public void setBalance(BigDecimal balance) {
         this.balance = balance;
     }
-    public Number getLimit() {
+    public BigDecimal getLimit() {
         return limit;
     }
     public void setLimit(BigDecimal limit) {
