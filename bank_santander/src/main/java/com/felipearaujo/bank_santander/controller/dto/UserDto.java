@@ -10,33 +10,32 @@ import static java.util.stream.Collectors.toList;
 
 import java.util.List;
 
-
 public record UserDto(
-    UUID id,
-    String name,
-    AccountDto account,
-    CardDto card,
-    List<FeatureDto> feature,
-    List<NewsDto> news) {
-    
-    public UserDto(User model){
+        UUID id,
+        String name,
+        AccountDto account,
+        CardDto card,
+        List<FeatureDto> feature,
+        List<NewsDto> news) {
+
+    public UserDto(User model) {
         this(
-            model.getId(),
-            model.getName(),
-            ofNullable(model.getAccount()).map(AccountDto::new).orElse(null),
-            ofNullable(model.getCard()).map(CardDto::new).orElse(null),
-            ofNullable(model.getFeature()).orElse(emptyList()).stream().map(FeatureDto::new).collect(toList()),
-            ofNullable(model.getNews()).orElse(emptyList()).stream().map(NewsDto::new).collect(toList())
-        );   
+                model.getId(),
+                model.getName(),
+                ofNullable(model.getAccount()).map(AccountDto::new).orElse(null),
+                ofNullable(model.getCard()).map(CardDto::new).orElse(null),
+                ofNullable(model.getFeature()).orElse(emptyList()).stream().map(FeatureDto::new).collect(toList()),
+                ofNullable(model.getNews()).orElse(emptyList()).stream().map(NewsDto::new).collect(toList()));
     }
 
-    public User toModel(){
+    public User toModel() {
         User model = new User();
         model.setId(this.id);
         model.setName(this.name);
         model.setAccount(ofNullable(this.account).map(AccountDto::toModel).orElse(null));
         model.setCard(ofNullable(this.card).map(CardDto::toModel).orElse(null));
-        model.setFeature(ofNullable(this.feature).orElse(emptyList()).stream().map(FeatureDto::toModel).collect(toList()));
+        model.setFeature(
+                ofNullable(this.feature).orElse(emptyList()).stream().map(FeatureDto::toModel).collect(toList()));
         model.setNews(ofNullable(this.news).orElse(emptyList()).stream().map(NewsDto::toModel).collect(toList()));
         return model;
     }

@@ -21,7 +21,7 @@ public class GlobalException {
 
     @ExceptionHandler
     public ResponseEntity<String> handleNotFoundException(NoSuchElementException notFoundException){
-        return new ResponseEntity<>("Resource ID not found.", HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>("Resource UUID not found.", HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler
