@@ -11,4 +11,6 @@ import com.felipearaujo.bank_santander.domain.model.User;
 public interface UserRepository extends JpaRepository<User, UUID>{
     
     boolean existsByAccountNumber(String accountNumber);
+
+    boolean existsByCardNumber(String number);
 }
