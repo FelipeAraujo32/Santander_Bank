@@ -59,7 +59,7 @@ classDiagram
 - Update: Atualizar uma entidade existente.
 - Delete: Excluir uma entidade existente.
 
-## Tecnologias Utilizadas
+## Tecnologias Utilizadas ✔️
 - Java: Linguagem de programação principal.
 - Spring: Framework utilizado para desenvolvimento de aplicações Java.
 - JPA (Java Persistence API): Especificação de API Java que descreve o gerenciamento de dados relacionais em aplicativos Java.
@@ -73,10 +73,14 @@ classDiagram
 4. Execute a aplicação utilizando o Maven: `mvn spring-boot:run`
 5. Acesse a documentação da API em `http://localhost:8080/swagger-ui.html`.
 
+# Autor 👦
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/136930797?v=4" width=150><br><sub>Felipe Araujo</sub>](https://github.com/FelipeAraujo32)
+| :---: |
+
 ## Contribuição
 Sinta-se à vontade para contribuir com este projeto. Caso encontre algum problema ou tenha sugestões de melhorias, por favor, abra uma issue ou envie um pull request.
 
-## Licença
+## Licença 📗 
 Este projeto está licenciado sob a MIT License.
 
    
